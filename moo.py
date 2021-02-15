@@ -84,4 +84,4 @@ async def idk(message):
 		await message.channel.send(random.choice(moo))
 
 keep_alive()
-client.run('ODEwOTQxOTE4ODk1ODAwMzYw.YCq-hA.f9udUg-fIix3z4NkG7t7Gn3Smec')
+client.run('my token')
