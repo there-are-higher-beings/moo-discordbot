@@ -1,7 +1,7 @@
 print(
 	"""
 	moo 1.0.0
-	Copyright (c) Jonathan Ford
+	Copyright (c) there-are-higher-beings
 	Licensed under the GNU AGPL 3.0
 	"""
 )
