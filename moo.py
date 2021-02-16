@@ -51,15 +51,10 @@ cow = [
 	'moo',
 	'milk',
 	'black',
-	'white'
-	]
-
-moo = [
-	'',
-	'',
-	'',
-	'',
-	'moo'
+	'white',
+	'🙏',
+	'🐄',
+	'🐮'
 	]
 
 @client.listen('on_message')
@@ -80,8 +75,8 @@ async def idk(message):
 		time.sleep(1.5)
 		await message.channel.send(random.choice(ping_responses))
 	
-	if any(word in message.content for word in message.content):
-		await message.channel.send(random.choice(moo))
+	if any(word in message.content for word in cow):
+		await message.channel.send('moo')
 
 keep_alive()
 client.run('my token')
