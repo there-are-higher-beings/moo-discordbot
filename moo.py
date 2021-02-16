@@ -52,6 +52,9 @@ cow = [
 	'milk',
 	'black',
 	'white',
+	'dairy',
+	'cream',
+	'butter',
 	'🙏',
 	'🐄',
 	'🐮'
