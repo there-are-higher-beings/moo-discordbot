@@ -5,38 +5,28 @@ print(
 	Licensed under the GNU AGPL 3.0
 	"""
 )
-
+#imports
 import discord
 import time
 import random
 from discord.ext import commands
-from keep_alive import keep_alive
 
+#bunch of things to include to make the code run
 client = commands.Bot(command_prefix = ["c;"])
 
+#message to send when running
 @client.event
 async def on_ready():
 	print("Connected to Discord at " + time.ctime())
 	perms = discord.Permissions(3072)
 	print("Invite link: {}".format(discord.utils.oauth_url(client.user.id, perms)))
-
-	'''
-	#Setting `Playing ` status
-	(name="a game")
-	# Setting `Streaming ` status
-	(name="My Stream", url=my_twitch_url)
-	# Setting `Listening ` status
-	(type=discord.ActivityType.listening, name="a song")
-	# Setting `Watching ` status
-	(type=discord.ActivityType.watching, name="a movie")
-	'''
-
+	#activity
 	await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name="grass grow"))
 	print('')
 	print(':::')
 	print('')
 
-
+#bunch of variables
 ping_responses = [
 	'stop',
 	'stap',
@@ -45,7 +35,6 @@ ping_responses = [
 	'bruh wth',
 	'i will kick you'
 	]
-
 cow = [
 	'cow',
 	'moo',
@@ -60,8 +49,10 @@ cow = [
 	'🐮'
 	]
 
+#a function to listen to sent messages
 @client.listen('on_message')
 async def idk(message):
+	#ignores the msg if its sent by a bot, so that there isnt an infinite loop of messages
 	if message.author == client.user:
 		return
 
@@ -81,5 +72,5 @@ async def idk(message):
 	if any(word in message.content for word in cow):
 		await message.channel.send('moo')
 
-keep_alive()
-client.run('my token')
+#replace TOKEN with your token
+client.run('TOKEN')
