@@ -1,7 +1,7 @@
 print(
 	"""
 	moo 1.0.0
-	Copyright (c) there-are-higher-beings
+	Copyright (c) c:/#4617
 	Licensed under the GNU AGPL 3.0
 	"""
 )
