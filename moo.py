@@ -1,7 +1,7 @@
 print(
 	"""
 	moo 1.0.0
-	Copyright (c) c:/#4617
+	Copyright (c) 2021 c:/#4617
 	Licensed under the GNU AGPL 3.0
 	"""
 )
