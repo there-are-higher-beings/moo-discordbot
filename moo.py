@@ -57,13 +57,6 @@ async def idk(message):
 
 	msg = message.content.lower()
 
-	if msg == 'boing':
-		await message.channel.send('boing')
-		await message.channel.send('boing')
-		await message.channel.send('boing')
-		await message.channel.send('boing')
-		await message.channel.send('boing')
-
 	if client.user.mentioned_in(message):
 		time.sleep(1.5)
 		await message.channel.send(random.choice(ping_responses))
